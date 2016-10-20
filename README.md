@@ -8,7 +8,7 @@ Implementation of Densely Connected Convolutional Networks by chainer
     git clone https://github.com/nutszebra/trainer.git
 
 # How to run
-    python -p ./ -e 300 -b 64 -g 0 -s 1 -trb 4 -teb 4 -lr 0.1
+    python main.py -p ./ -e 300 -b 64 -g 0 -s 1 -trb 4 -teb 4 -lr 0.1
 
 # Details about my implementation
 main.py executes dense_net on cifar10.  

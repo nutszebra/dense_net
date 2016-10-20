@@ -1,7 +1,9 @@
-import trainer.nutszebra_cifar10 as nutszebra_cifar10
 import nutszebra_optimizer
 import dense_net
 import argparse
+import sys
+sys.path.append('./trainer')
+import nutszebra_cifar10 as nutszebra_cifar10
 
 if __name__ == '__main__':
 

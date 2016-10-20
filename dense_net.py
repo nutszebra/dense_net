@@ -2,7 +2,7 @@ import six
 import numpy as np
 import chainer.links as L
 import chainer.functions as F
-import nutszebra_chainer
+import trainer.nutszebra_chainer as nutszebra_chainer
 import functools
 from collections import defaultdict
 

@@ -18,7 +18,7 @@ if __name__ == '__main__':
                         default=None,
                         help='optimizer for trained model')
     parser.add_argument('--save_path', '-p',
-                        default='/home/suguru/fashion/model/pants/vgg_A_relu_bn_after_data_augmentation/',
+                        default='./',
                         help='model and optimizer will be saved every epoch')
     parser.add_argument('--epoch', '-e', type=int,
                         default=300,

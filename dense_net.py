@@ -31,7 +31,7 @@ class Transition_Layer(nutszebra_chainer.Model):
     def __init__(self, in_channel, out_channel):
         super(Transition_Layer, self).__init__()
         modules = []
-        modules.append(('bn_relu_conv', BN_ReLU_Conv(in_channel, in_channel, filter_size=(1, 1), stride=(1, 1), pad=(1, 1))))
+        modules.append(('bn_relu_conv', BN_ReLU_Conv(in_channel, in_channel, filter_size=(1, 1), stride=(1, 1), pad=(0, 0))))
         # register layers
         [self.add_link(*link) for link in modules]
         self.modules = modules

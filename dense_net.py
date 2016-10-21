@@ -134,6 +134,8 @@ class DenselyConnectedCNN(nutszebra_chainer.Model):
 
     def count_parameters(self):
         count = 0
+        count += functools.reduce(lambda a, b: a * b, self.conv1.W.data.shape)
+        count += functools.reduce(lambda a, b: a * b, self.fc1.W.data.shape)
         for i in six.moves.range(1, self.block_num + 1):
             count = count + self['dense{}'.format(i)].count_parameters()
             if i <= self.block_num - 1:

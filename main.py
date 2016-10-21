@@ -48,7 +48,7 @@ if __name__ == '__main__':
     print('generating model')
     model = dense_net.DenselyConnectedCNN(10, block_num=3, block_size=12, growth_rate=12)
     print('Done')
-    optimizer = nutszebra_optimizer.OptimizerDense(model)
+    optimizer = nutszebra_optimizer.OptimizerDense(model, lr=lr)
     args['model'] = model
     args['optimizer'] = optimizer
     main = nutszebra_cifar10.TrainCifar10(**args)

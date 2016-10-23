@@ -90,3 +90,15 @@ ENV/
 
 # trainer
 trainer
+
+# model
+model
+model.dot
+
+# log
+log
+log.json
+
+# cifar10
+cifar10.pkl
+cifar-10-batches-py

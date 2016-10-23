@@ -14,7 +14,7 @@ Implementation of Densely Connected Convolutional Networks (DCCN) by chainer
 main.py runs DCCN on cifar10.  
 The depth of DCCN is 40, due to the lack of gpu memory.  
 All hyperparameters and network architecture are the same as in [[1]][Paper] except for data-augmentation.  
-As a result, I could confirm 95.12% total accuracy at epoch 251 and this result has almost the same accuracy that is reported by [[1]][Paper].  
+As a result, I could confirm 95.12% total accuracy at epoch 251 and this result has almost the same accuracy as reported by [[1]][Paper].  
 <img src="https://github.com/nutszebra/dense_net/blob/master/loss.jpg" alt="loss" title="loss">
 <img src="https://github.com/nutszebra/dense_net/blob/master/accuracy.jpg" alt="total accuracy" title="total accuracy">
 # References

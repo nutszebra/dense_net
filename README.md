@@ -15,11 +15,11 @@ main.py runs DCCN on cifar10.
 The depth of DCCN is 40, due to the lack of gpu memory.  
 All hyperparameters and network architecture are the same as in [[1]][Paper] except for data-augmentation.  
 * Data augmentation  
-Pictures are randomly resized in the range of [28, 36], then 26x26 patches are extracted randomly and are normalized locally.
-Horizontal flipping is applied with 0.5 probability.  
+Train: Pictures are randomly resized in the range of [28, 36], then 26x26 patches are extracted randomly and are normalized locally. Horizontal flipping is applied with 0.5 probability.  
+Test: Pictures are randomly resized to 32x32, then they are normalized locally. Single image test is used to calculate total accuracy.  
 
 # Result
-As a result, I could confirm 95.12% total accuracy at epoch 251 and this result has almost the same accuracy as reported by [[1]][Paper].  
+As a result, I could confirm 95.12% total accuracy at epoch 250 and this result has almost the same accuracy as reported by [[1]][Paper].  
 
 | network           | depth | k  | total accuracy (%) |
 |:------------------|-------|----|-------------------:|

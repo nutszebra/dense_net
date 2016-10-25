@@ -15,7 +15,7 @@ main.py runs DCCN on cifar10.
 The depth of DCCN is 40, due to the lack of gpu memory.  
 All hyperparameters and network architecture are the same as in [[1]][Paper] except for data-augmentation.  
 * Data augmentation  
-Pictures are randomly resized in the range of [28, 36], then 26x26 patches are extracted randomly.
+Pictures are randomly resized in the range of [28, 36], then 26x26 patches are extracted randomly and are normalized locally.
 Horizontal flipping is applied with 0.5 probability.  
 
 # Result

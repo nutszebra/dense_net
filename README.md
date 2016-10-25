@@ -11,14 +11,12 @@ Implementation of Densely Connected Convolutional Networks (DCCN) by chainer
     python main.py -p ./ -e 300 -b 64 -g 0 -s 1 -trb 4 -teb 4 -lr 0.1
 
 # Details about my implementation
-main.py runs DCCN on cifar10.  
-The depth of DCCN is 40, due to the lack of gpu memory.  
 All hyperparameters and network architecture are the same as in [[1]][Paper] except for data-augmentation.  
 * Data augmentation  
 Train: Pictures are randomly resized in the range of [28, 36], then 26x26 patches are extracted randomly and are normalized locally. Horizontal flipping is applied with 0.5 probability.  
 Test: Pictures are randomly resized to 32x32, then they are normalized locally. Single image test is used to calculate total accuracy.  
 
-# Result
+# Cifar10 result
 As a result, I could confirm 95.12% total accuracy at epoch 250 and this result has almost the same accuracy as reported by [[1]][Paper].  
 
 | network           | depth | k  | total accuracy (%) |

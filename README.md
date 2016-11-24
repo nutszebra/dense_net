@@ -15,7 +15,7 @@ Implementation of Densely Connected Convolutional Networks (DCCN) by chainer
 All hyperparameters and network architecture are the same as in [[1]][Paper] except for data-augmentation.  
 * Data augmentation  
 Train: Pictures are randomly resized in the range of [32, 36], then 32x32 patches are extracted randomly and are normalized locally. Horizontal flipping is applied with 0.5 probability.  
-Test: Pictures are randomly resized to 32x32, then they are normalized locally. Single image test is used to calculate total accuracy.  
+Test: Pictures are resized to 32x32, then they are normalized locally. Single image test is used to calculate total accuracy.  
 
 # Cifar10 result
 As a result, I could confirm 95.12% total accuracy at epoch 250 and this result has almost the same accuracy as reported by [[1]][Paper].  

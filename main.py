@@ -41,13 +41,23 @@ if __name__ == '__main__':
     parser.add_argument('--lr', '-lr', type=float,
                         default=0.1,
                         help='leraning rate')
+    parser.add_argument('--depth', '-depth', type=int,
+                        default=40,
+                        help='leraning rate')
+    parser.add_argument('--growth_rate', '-growth_rate', type=int,
+                        default=12,
+                        help='leraning rate')
 
     args = parser.parse_args().__dict__
+    print(args)
     lr = args.pop('lr')
+    depth = args.pop('depth')
+    growth_rate = args.pop('growth_rate')
 
     print('generating model')
-    model = dense_net.DenselyConnectedCNN(10, block_num=3, block_size=12, growth_rate=12)
+    model = dense_net.DenselyConnectedCNN(10, block_num=3, block_size=int((depth - 2) / 3.0), growth_rate=growth_rate)
     print('Done')
+    print('Parameters: {}'.format(model.count_parameters()))
     optimizer = nutszebra_optimizer.OptimizerDense(model, lr=lr)
     args['model'] = model
     args['optimizer'] = optimizer
